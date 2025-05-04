@@ -7,7 +7,7 @@ What is a <b>premium concrete home</b>?
 | | |
 | - | - |
 | Virtually indestructible | Monolithic concrete structure (foundation, walls, roof) reinforced with fiberglass rebar and impact resistant windows. Bring dynamite. |
-| Category 5 hurricane & tornado resistant | Save thousands on home insurance and win piece of mind. |
+| Category 5 hurricane & tornado resistant | Save thousands on home insurance and win peace of mind. |
 | Energy efficient | Double insulation gives tremendous energy savings. Save money on your electricity bill or live off-grid with solar. |
 | Termite and corrosion proof | No wood or steel is used in the structure. |
 | The premium feeling | Large open spaces with 12' ceilings. |
