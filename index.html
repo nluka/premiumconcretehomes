@@ -130,10 +130,12 @@
     .county-logos {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 30px;
+        gap: 20px;
         justify-items: center;
         align-items: center;
-        margin: 2em 0;
+        padding: 2em 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
     }
 
     .county-logos img {
@@ -162,14 +164,55 @@
         }
     }
 
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 2em 0;
+    }
+
+    .service-item {
+      display: contents; /* Let child items directly occupy the grid cells */
+    }
+
+    .service-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .service-item div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-item h3 {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-item {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .c {
+      margin-top: .25em;
+      margin-bottom: .25em;
+    }
+
   </style>
 </head>
 <body>
     <div class="container">
     <img src="assets/logo_with_phone_transparent.png" alt="Logo with Phone" class="logo" />
-
-    <h1>Premium Concrete Homes in Sarasota, Venice, North Port, Port Charlotte & Nokomis</h1>
-    <p>We are a team of drafters, architects and builders who plan and build premium concrete homes in Southwest Florida’s Gulf Coast region.</p>
 
     <div class="county-logos">
         <img src="assets/sarasota-logo.png" alt="Sarasota County" />
@@ -178,7 +221,85 @@
         <img src="assets/north-port-logo.webp" alt="North Port" />
     </div>
 
-    <strong>What is a premium concrete home?</strong>
+    <!-- <h2>Drafting and Construction Drawings</h2> -->
+
+    <div class="service-grid">
+      <div class="service-item">
+        <img src="assets/construction_drawings_collage.png" alt="Permit Drawing">
+        <div>
+          <h3 class="">Construction drawings for permit</h3>
+          <p class="c ">Starting at $1000</p>
+          <p class="c ">4 weeks</p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <img src="assets/drafting_300ppi_bg.png" alt="Floorplan Sketch" style="margin-bottom: 1em;">
+        <div>
+          <h3 class="">Floorplan from your basic sketch</h3>
+          <p class="c ">Starting at $250</p>
+          <p class="c ">1-2 weeks</p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <img src="assets/3d_collage2.png" alt="3D Views" style="margin-bottom: .5em;">
+        <div>
+          <h3 class="">3D views from floorplan</h3>
+          <p class="c ">Starting at $250</p>
+          <p class="c ">1-2 weeks</p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <img src="assets/3d_tour.jpg" alt="3D Tour" style="margin-bottom: 1em;">
+        <div>
+          <h3 class="">3D tour from floorplan</h3>
+          <p class="c ">Starting at $500</p>
+          <p class="c ">1-2 weeks</p>
+        </div>
+      </div>
+    </div>
+
+    <p>Estimates are based on typical projects. Price and turnaround time scale with complexity and number of revisions. We are happy to go beyond the standard and provide highly customized drawings and renderings for you.</p>
+
+    <!-- <h2>Drafting and construction drawings</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Starting price</th>
+          <th>Estimated turnaround time</th>
+        </tr>
+        <tr>
+          <td>Construction drawings for permit</td>
+          <td>$1000</td>
+          <td>4 weeks</td>
+        </tr>
+        <tr>
+          <td>Floorplan drawing from your basic sketch</td>
+          <td>$250</td>
+          <td>1-2 weeks</td>
+        </tr>
+        <tr>
+          <td>3D views from floorplan</td>
+          <td>$250</td>
+          <td>1-2 weeks</td>
+        </tr>
+        <tr>
+          <td>3D walkthrough from floorplan</td>
+          <td>$500</td>
+          <td>2-3 weeks</td>
+        </tr>
+      </table>
+    </div> -->
+
+    <h2>Complete monolithic concrete home construction</h2>
+
+    <p>We can build your dream monolithic concrete home, from start to finish. These projects take 12-18 months. Payment is progressive with construction. We limit the number of simultaneous projects to ensure timeliness, please contact us regarding availability.</p>
+
+    <strong>Monolithic concrete home benefits</strong>
 
     <div class="table-wrapper">
       <table>
@@ -205,52 +326,17 @@
       </table>
     </div>
 
-    <h2>Drafting and construction drawings</h2>
-
-    <div class="table-wrapper">
-      <table>
-        <tr>
-          <th>Service</th>
-          <th>Starting price</th>
-          <th>Estimated turnaround time</th>
-        </tr>
-        <tr>
-          <td>Floorplan drawing from your basic sketch</td>
-          <td>$250</td>
-          <td>1-2 weeks</td>
-        </tr>
-        <tr>
-          <td>3D renderings from floorplan</td>
-          <td>$250</td>
-          <td>1-2 weeks</td>
-        </tr>
-        <tr>
-          <td>3D walkthrough from floorplan</td>
-          <td>$500</td>
-          <td>2-3 weeks</td>
-        </tr>
-        <tr>
-          <td>Construction drawings for permit</td>
-          <td>$1000</td>
-          <td>4 weeks</td>
-        </tr>
-      </table>
-    </div>
-
-    <p>Estimates are based on typical projects. Price and turnaround time scales with complexity and number of revisions. We are happy to go beyond the standard and provide highly customized drawings and renderings for you.</p>
-
-    <h2>Sale of construction materials and products</h2>
+    <!-- <h2>Sale of construction materials and products</h2>
 
     <ul>
       <li>Rebars (Fiberglass/GFRP)</li>
       <li>Insulated Concrete Forms (ICF)</li>
       <li>Florida approved doors (exterior and interior)</li>
       <li>High efficiency solar panels</li>
-    </ul>
+    </ul> -->
 
-    <h2>Full construction projects</h2>
-
-    <p>We can build your dream concrete home, from start to finish. These projects take 12-18 months. Payment is progressive with construction. We limit the number of simultaneous projects to ensure timeliness, please contact us regarding availability.</p>
+    <!-- <h1>Premium Concrete Homes in Sarasota, Venice, North Port, Port Charlotte & Nokomis</h1>
+    <p>We are a team of drafters, architects and builders who plan and build premium concrete homes in Southwest Florida’s Gulf Coast region.</p> -->
   </div>
 </body>
 </html>
