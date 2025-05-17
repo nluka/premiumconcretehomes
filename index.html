@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premium Concrete Homes</title>
   <link rel="icon" href="assets/icon_transparent.png" type="image/png" />
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="We build premium concrete homes in Sarasota, Venice, North Port, Port Charlotte, and Nokomis. Strong, energy-efficient, hurricane-resistant homes built with ICF and fiberglass rebar.">
-  <meta name="keywords" content="concrete homes, Sarasota, Venice, North Port, Port Charlotte, Nokomis, ICF, hurricane proof, energy efficient, home builder Florida">
+  <meta name="description"
+    content="We build premium concrete homes in Sarasota, Venice, North Port, Port Charlotte, and Nokomis. Strong, energy-efficient, hurricane-resistant homes built with ICF and fiberglass rebar.">
+  <meta name="keywords"
+    content="concrete homes, Sarasota, Venice, North Port, Port Charlotte, Nokomis, ICF, hurricane proof, energy efficient, home builder Florida">
   <meta name="author" content="Premium Concrete Homes">
 
   <!-- Open Graph (Social Media Preview) -->
   <meta property="og:title" content="Premium Concrete Homes" />
-  <meta property="og:description" content="Durable, energy-efficient ICF homes in Sarasota, Venice, Port Charlotte, North Port, Nokomis." />
+  <meta property="og:description"
+    content="Durable, energy-efficient ICF homes in Sarasota, Venice, Port Charlotte, North Port, Nokomis." />
   <meta property="og:image" content="https://nluka.github.io/premiumconcretehomes/assets/icon_padded.png" />
   <meta property="og:url" content="https://nluka.github.io/premiumconcretehomes/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -49,42 +58,112 @@
   }
   </script>
 
+  <script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html {
+      font-size: 14px;
+      font-family: Roboto;
+    }
+
+    @media (min-width: 1000px) {
+      html {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 2000px) {
+      html {
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: 3000px) {
+      html {
+        font-size: 32px;
+      }
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      /* background-color: #f9f9f9; */
-      background-color: white;
+      background-color: whitesmoke;
       color: #222;
       line-height: 1.6;
     }
 
     .container {
-      max-width: 960px;
       margin: auto;
-      padding: 20px;
-      padding-bottom: 150px;
+      padding: 1rem;
+      padding-bottom: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
 
     img.logo {
       width: 100%;
       height: auto;
       display: block;
-      margin-bottom: 20px;
+      /* margin-bottom: 20px; */
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
-    h1, h2, h3 {
-      color: #333;
-      margin-top: 2em;
+    @media (min-width: 1500px) {
+      .logo-wrapper {
+        width: 50%;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      img.logo {
+        filter: invert(0.85) brightness(0.9) contrast(0.95);
+      }
     }
 
     h1 {
-        font-size: 1.25em;
-        font-weight: normal;
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 1500px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      h3 {
+        font-size: 1.75rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 2rem 0 1rem 0;
     }
 
     table {
@@ -96,7 +175,7 @@
     table th,
     table td {
       border: 1px solid #ccc;
-      padding: 10px;
+      padding: .5rem;
       text-align: left;
     }
 
@@ -109,17 +188,10 @@
     }
 
     ul {
-      padding-left: 1.2em;
+      padding-left: 1.2rem;
     }
 
     @media (max-width: 600px) {
-      body {
-        font-size: 16px;
-      }
-
-      h1, h2, h3 {
-        font-size: 1.25em;
-      }
 
       table th,
       table td {
@@ -129,219 +201,327 @@
     }
 
     .county-logos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 20px;
-        justify-items: center;
-        align-items: center;
-        padding: 2em 0;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 2em 0;
     }
 
-    .county-logos img {
-        width: 100px;
-        height: auto;
-        display: block;
+    .county-logo-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s;
+      padding: 0;
     }
 
-    /* Tablets and small laptops */
-    @media (min-width: 768px) {
-        .county-logos img {
-            width: 150px;
-        }
-        .container {
-            padding-bottom: 200px;
-        }
+    .county-logo-svg {
+      width: 10rem;
+      height: 7rem;
+      display: block;
     }
 
-    /* Laptops and larger */
-    @media (min-width: 1024px) {
-        .county-logos img {
-            width: 200px;
-        }
-        .container {
-            padding-bottom: 300px;
-        }
+    @media (min-width: 1500px) {
+      .county-logo-svg {
+        width: 15rem;
+        height: 10rem;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .county-logo-svg {
+        filter: invert(0.85) brightness(1.5) contrast(1.2);
+      }
     }
 
     .service-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(1, 1fr);
+      /* default: 1 column */
       gap: 30px;
-      margin: 2em 0;
+      margin: 2rem 1rem;
+    }
+
+    @media (max-width: 500px) {
+      .service-grid {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 600px) {
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* medium screens: 2 columns */
+      }
+    }
+
+    @media (min-width: 1500px) {
+      .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* large screens: 4 columns */
+      }
     }
 
     .service-item {
-      display: contents; /* Let child items directly occupy the grid cells */
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+      /* spacing between image and text blocks */
+      background: white;
+      border-radius: .5rem;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      padding-bottom: 1rem;
     }
 
     .service-item img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
       display: block;
+      border-radius: .5rem .5rem 0 0;
+    }
+
+    .image-container {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .image-container .main-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: .5rem .5rem 0 0;
+    }
+
+    .image-container .expand-icon {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      width: 2rem !important;
+      height: 2rem !important;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: .25rem;
+      padding: .1rem;
+      pointer-events: none;
+      z-index: 2;
     }
 
     .service-item div {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 1rem;
     }
 
     .service-item h3 {
       margin: 0;
-    }
-
-    @media (max-width: 768px) {
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-item {
-        display: block;
-        text-align: center;
-      }
+      margin-bottom: 1.5rem;
     }
 
     .c {
-      margin-top: .25em;
-      margin-bottom: .25em;
+      margin-top: .25rem;
+      margin-bottom: .25rem;
     }
 
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px black;
+      border-radius: 1rem;
+    }
+
+    .remainder {
+      margin: .25rem;
+    }
+
+    @media (min-width: 800px) {
+      .remainder {
+        margin: 1rem 2rem;
+      }
+    }
+
+    @media (min-width: 1700px) {
+      .remainder {
+        max-width: 60%;
+      }
+    }
   </style>
 </head>
-<body>
-    <div class="container">
-    <img src="assets/logo_with_phone.png" alt="Logo with Phone" class="logo" />
 
-    <div class="county-logos">
-        <img src="assets/sarasota-logo.png" alt="Sarasota County" />
-        <img src="assets/charlotte-county-logo.png" alt="Charlotte County" />
-        <img src="assets/venice-logo.png" alt="Venice" />
-        <img src="assets/north-port-logo.webp" alt="North Port" />
+<body>
+  <div class="container">
+    <div class="logo-wrapper">
+      <img src="assets/logo2.png" alt="Logo with Phone" class="logo" />
     </div>
 
-    <!-- <h2>Drafting and Construction Drawings</h2> -->
+    <div class="county-logos">
+      <div class="county-logo-card">
+        <svg class="county-logo-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="300" height="200" rx="16" ry="16" fill="white" />
+          <image href="assets/sarasota-logo.png" x="25" y="25" width="250" height="150"
+            preserveAspectRatio="xMidYMid meet" />
+        </svg>
+      </div>
+      <div class="county-logo-card">
+        <svg class="county-logo-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="300" height="200" rx="16" ry="16" fill="white" />
+          <image href="assets/charlotte-county-logo.png" x="25" y="25" width="250" height="150"
+            preserveAspectRatio="xMidYMid meet" />
+        </svg>
+      </div>
+      <div class="county-logo-card">
+        <svg class="county-logo-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="300" height="200" rx="16" ry="16" fill="white" />
+          <image href="assets/venice-logo.png" x="25" y="25" width="250" height="150"
+            preserveAspectRatio="xMidYMid meet" />
+        </svg>
+      </div>
+      <div class="county-logo-card">
+        <svg class="county-logo-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="300" height="200" rx="16" ry="16" fill="white" />
+          <image href="assets/north-port-logo.webp" x="25" y="25" width="250" height="150"
+            preserveAspectRatio="xMidYMid meet" />
+        </svg>
+      </div>
+    </div>
+
+    <h1>Drafting Services</h1>
 
     <div class="service-grid">
       <div class="service-item">
-        <img src="assets/construction_drawings_collage.png" alt="Permit Drawing">
+        <div class="image-container" onclick="openLightbox(this.querySelector('.main-image'))">
+          <img src="assets/construction_drawings_collage_2.png" alt="Permit Drawing" class="main-image">
+          <img src="assets/expand-icon.svg" alt="Expand Icon" class="expand-icon">
+        </div>
+        <!-- <img src="assets/construction_drawings_collage_2.png" alt="Permit Drawing" onclick="openLightbox(this)"> -->
         <div>
-          <h3 class="">Construction drawings for permit</h3>
-          <p class="c ">From your basic sketch we prepare blueprints ready for permit approval</p>
+          <h3 class="">Blueprints for permit</h3>
           <p class="c ">Starting at $1000</p>
           <p class="c ">4 weeks</p>
+          <p class="c ">Turn your basic sketch into construction drawings ready for permit approval</p>
         </div>
       </div>
 
       <div class="service-item">
-        <img src="assets/drafting_300ppi_bg.png" alt="Floorplan Sketch" style="margin-bottom: 1em;">
+        <div class="image-container" onclick="openLightbox(this.querySelector('.main-image'))">
+          <img src="assets/drafting_300ppi_bg_2.png" alt="Floorplan Sketch" class="main-image">
+          <img src="assets/expand-icon.svg" alt="Expand Icon" class="expand-icon">
+        </div>
+        <!-- <img src="assets/drafting_300ppi_bg_2.png" alt="Floorplan Sketch" onclick="openLightbox(this)"> -->
         <div>
-          <h3 class="">Floorplan from your basic sketch</h3>
-          <p class="c ">From your basic sketch we prepare a floorplan that includes functional furniture and appliance placements</p>
+          <h3 class="">Floorplan from basic sketch</h3>
           <p class="c ">Starting at $250</p>
           <p class="c ">1-2 weeks</p>
+          <p class="c ">Turn your basic sketch into a floorplan that includes functional furniture and appliance
+            placements</p>
         </div>
       </div>
 
       <div class="service-item">
-        <img src="assets/3d_collage2.png" alt="3D Views" style="margin-bottom: .5em;">
+        <div class="image-container" onclick="openLightbox(this.querySelector('.main-image'))">
+          <img src="assets/3d_collage2.png" alt="3D Views" class="main-image">
+          <img src="assets/expand-icon.svg" alt="Expand Icon" class="expand-icon">
+        </div>
+        <!-- <img src="assets/3d_collage2.png" alt="3D Views" onclick="openLightbox(this)"> -->
         <div>
           <h3 class="">3D views from floorplan</h3>
-          <p class="c ">From a floorplan we create a fully finished and furnished 3D model, including kitchen design</p>
           <p class="c ">Starting at $250</p>
           <p class="c ">1-2 weeks</p>
+          <p class="c ">Turn your floorplan into a fully finished and furnished 3D model, including kitchen design</p>
         </div>
       </div>
 
       <div class="service-item">
-        <img src="assets/3d_tour.jpg" alt="3D Tour" style="margin-bottom: 1em;">
+        <div class="image-container" onclick="openLightbox(this.querySelector('.main-image'))">
+          <img src="assets/3d_collage2.png" src="assets/3d_tour_2.jpg" alt="3D Tour" class="main-image">
+          <img src="assets/expand-icon.svg" alt="Expand Icon" class="expand-icon">
+        </div>
+        <!-- <img src="assets/3d_tour_2.jpg" alt="3D Tour" onclick="openLightbox(this)"> -->
         <div>
           <h3 class="">3D tour from floorplan</h3>
-          <p class="c ">From a 3D model we give you a virtual tour to show off your home and make adjustments</p>
           <p class="c ">Starting at $250</p>
           <p class="c ">1 week</p>
+          <p class="c ">We give you a virtual tour of your 3D model to show off your home and make adjustments</p>
         </div>
       </div>
     </div>
 
-    <p>Estimates are based on typical projects. Price and time scales with complexity and number of revisions. We are happy to go beyond the standard and provide highly customized drawings and renderings for you.</p>
+    <div class="remainder">
+      <div style="text-align: center;"><i>Estimates are based on typical projects. Price and time scales with
+          complexity and number of revisions. We are happy to go beyond the standard and provide highly customized
+          drawings and renderings for you.</i></div>
 
-    <!-- <h2>Drafting and construction drawings</h2>
+      <h1 style="margin-top: 4rem;">Complete monolithic concrete home construction</h1>
 
-    <div class="table-wrapper">
-      <table>
-        <tr>
-          <th>Service</th>
-          <th>Starting price</th>
-          <th>Estimated turnaround time</th>
-        </tr>
-        <tr>
-          <td>Construction drawings for permit</td>
-          <td>$1000</td>
-          <td>4 weeks</td>
-        </tr>
-        <tr>
-          <td>Floorplan drawing from your basic sketch</td>
-          <td>$250</td>
-          <td>1-2 weeks</td>
-        </tr>
-        <tr>
-          <td>3D views from floorplan</td>
-          <td>$250</td>
-          <td>1-2 weeks</td>
-        </tr>
-        <tr>
-          <td>3D walkthrough from floorplan</td>
-          <td>$500</td>
-          <td>2-3 weeks</td>
-        </tr>
-      </table>
-    </div> -->
+      <p>We can build your dream monolithic concrete home, from start to finish. These projects take 12-18 months.
+        Payment is progressive with construction. We limit the number of simultaneous projects to ensure timeliness,
+        please contact us regarding availability.</p>
 
-    <h2>Complete monolithic concrete home construction</h2>
+      <h2>Monolithic concrete home benefits</h2>
 
-    <p>We can build your dream monolithic concrete home, from start to finish. These projects take 12-18 months. Payment is progressive with construction. We limit the number of simultaneous projects to ensure timeliness, please contact us regarding availability.</p>
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <td>Practically indestructible</td>
+            <td>Monolithic concrete structure (foundation, walls, roof) reinforced with super strong fiberglass rebar
+              and impact resistant windows. Bring dynamite.</td>
+          </tr>
+          <tr>
+            <td>Category 5 hurricane &amp; tornado resistant</td>
+            <td>Safety, home insurance savings, peace of mind.</td>
+          </tr>
+          <tr>
+            <td>Energy efficient</td>
+            <td>Double insulation from ICF creates tremendous energy savings. Save money on your electricity bill or
+              live off grid with solar.</td>
+          </tr>
+          <tr>
+            <td>Termite and corrosion proof</td>
+            <td>No wood or steel is used in the structure.</td>
+          </tr>
+          <tr>
+            <td>The premium feeling</td>
+            <td>Large open spaces with 12' ceilings.</td>
+          </tr>
+        </table>
+      </div>
 
-    <strong>Monolithic concrete home benefits</strong>
+      <!-- <h2>Sale of construction materials and products</h2>
 
-    <div class="table-wrapper">
-      <table>
-        <tr>
-          <td>Practically indestructible</td>
-          <td>Monolithic concrete structure (foundation, walls, roof) reinforced with super strong fiberglass rebar and impact resistant windows. Bring dynamite.</td>
-        </tr>
-        <tr>
-          <td>Category 5 hurricane &amp; tornado resistant</td>
-          <td>Save thousands on home insurance and win peace of mind.</td>
-        </tr>
-        <tr>
-          <td>Energy efficient</td>
-          <td>Double insulation from ICF creates tremendous energy savings. Save money on your electricity bill or live off grid with solar with such efficiency.</td>
-        </tr>
-        <tr>
-          <td>Termite and corrosion proof</td>
-          <td>No wood or steel is used in the structure.</td>
-        </tr>
-        <tr>
-          <td>The premium feeling</td>
-          <td>Large open spaces with 12' ceilings.</td>
-        </tr>
-      </table>
+      <ul>
+        <li>Rebars (Fiberglass/GFRP)</li>
+        <li>Insulated Concrete Forms (ICF)</li>
+        <li>Florida approved doors (exterior and interior)</li>
+        <li>High efficiency solar panels</li>
+      </ul> -->
+
+      <!-- <h1>Premium Concrete Homes in Sarasota, Venice, North Port, Port Charlotte & Nokomis</h1>
+      <p>We are a team of drafters, architects and builders who plan and build premium concrete homes in Southwest Florida’s Gulf Coast region.</p> -->
     </div>
 
-    <!-- <h2>Sale of construction materials and products</h2>
-
-    <ul>
-      <li>Rebars (Fiberglass/GFRP)</li>
-      <li>Insulated Concrete Forms (ICF)</li>
-      <li>Florida approved doors (exterior and interior)</li>
-      <li>High efficiency solar panels</li>
-    </ul> -->
-
-    <!-- <h1>Premium Concrete Homes in Sarasota, Venice, North Port, Port Charlotte & Nokomis</h1>
-    <p>We are a team of drafters, architects and builders who plan and build premium concrete homes in Southwest Florida’s Gulf Coast region.</p> -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Full Size" />
+    </div>
   </div>
 </body>
+
 </html>
